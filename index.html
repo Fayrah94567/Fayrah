@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fayrah Li | Personal Website</title>
+    <style>
+        /* Global Base & Soft Sand Color Palette */
+        :root {
+            --sand-bg: #F5F1E9;
+            --sand-card: #FAF7F2;
+            --sand-accent: #C8B9A6;
+            --sand-dark: #6B5F50;
+            --text-main: #2D2A26;
+            --text-light: #787065;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: var(--sand-bg);
+            color: var(--text-main);
+            line-height: 1.7;
+        }
+        /* Fixed Navigation Bar */
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background-color: var(--sand-card);
+            box-shadow: 0 2px 10px rgba(107, 95, 80, 0.08);
+            z-index: 999;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--sand-dark);
+        }
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: var(--sand-dark);
+        }
+        /* Mobile Nav Toggle */
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        /* Page Container & Section Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        section {
+            padding: 7rem 0 4rem;
+        }
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--sand-dark);
+            border-bottom: 2px solid var(--sand-accent);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        /* Hero Header Section */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+        }
+        .hero-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .hero-text h1 {
+            font-size: 3.2rem;
+            color: var(--sand-dark);
+            margin-bottom: 0.5rem;
+        }
+        .hero-text .tagline {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+        .profile-photo-container {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid var(--sand-accent);
+            background-color: var(--sand-card);
+            margin: 0 auto;
+        }
+        .profile-photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        /* Card Content Style */
+        .content-card {
+            background-color: var(--sand-card);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(107, 95, 80, 0.06);
+        }
+        .content-card p {
+            font-size: 1.05rem;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+        }
+        /* Contact Footer Section */
+        #contact {
+            text-align: center;
+            padding-bottom: 6rem;
+        }
+        .contact-email {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            color: var(--sand-dark);
+            font-weight: 500;
+        }
+        /* Mobile Responsive Breakpoint */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--sand-card);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.2rem;
+                display: none;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .hero-wrapper {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-text h1 {
+                font-size: 2.4rem;
+            }
+            .profile-photo-container {
+                width: 260px;
+                height: 260px;
+                margin-top: 2rem;
+            }
+            section {
+                padding: 6rem 0 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">Fayrah Li</div>
+            <div class="menu-toggle" id="menuBtn">☰</div>
+            <div class="nav-links" id="navMenu">
+                <a href="#about">About Me</a>
+                <a href="#skills">Skills & Hobbies</a>
+                <a href="#activities">Activities & Background</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Profile Photo Placeholder -->
+    <section id="hero">
+        <div class="container hero-wrapper">
+            <div class="hero-text">
+                <h1>Fayrah Li</h1>
+                <p class="tagline">Aspiring Student</p>
+            </div>
+            <div class="profile-photo-container">
+                <!-- Photo placeholder, no broken page if missing photo.jpg -->
+                <img src="photo.jpg" alt="Fayrah Li Profile Photo" onerror="this.style.display='none'">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="content-card">
+            <p>My name is Fayrah Li, a senior student with the title of an aspiring student. I am working toward a double major in Psychology and Digital New Media. I hold a strong curiosity around human thought patterns and behaviors, alongside the influence social media and digital platforms exert on daily human life. This dual major lets me study human psychology and contemporary digital communication from two complementary viewpoints. I love ice skating during my free time as a way to relax and stay focused.</p>
+            <p>While I am still exploring my long-term career path, I stay eager to absorb new knowledge, explore new chances, and eventually build a career that perfectly merges my academic and personal interests.</p>
+        </div>
+    </section>
+
+    <!-- Skills & Hobbies Section -->
+    <section id="skills" class="container">
+        <h2 class="section-title">Skills & Hobbies</h2>
+        <div class="content-card">
+            <p>Pre-Calculus stands out as my core academic strength, and consistent focused effort in this subject has shaped my core thinking style. Working through intricate formulas and multi-layered math problems not only brought me academic success, but also trained me to untangle complex concepts, analyze problems from multiple viewpoints, and deliver structured, stable solutions. This logical framework has boosted my efficiency across all coursework, and my hard work was recognized with a school Pre-Calculus award that was granted to only three students in our entire grade.</p>
+            <p>Outside formal academics, I spend my free time on creative pursuits: drawing, music creation, and photography. Drawing lets me capture delicate details and externalize internal ideas visually; creating and performing music lets me immerse myself in emotional expression; photography lets me document quiet, ordinary moments from daily life. These creative hobbies have refined my observational skills and personal aesthetic taste, balancing the rigid logic I built from mathematics and granting me more flexible, creative problem-solving perspectives.</p>
+        </div>
+    </section>
+
+    <!-- Activities & Background Section -->
+    <section id="activities" class="container">
+        <h2 class="section-title">Activities & Background</h2>
+        <div class="content-card">
+            <p>Currently enrolled at Dalian American International School (DAIS), I am completing my double major in Psychology and Media with a Digital New Media concentration. My most meaningful independent academic project centered on teenage appearance anxiety, where I researched how social media fuels appearance-centric worries. ...
+<img src="photo.jpg" alt="Fayrah Li Profile Photo" onerror="this.style.display='none'">
