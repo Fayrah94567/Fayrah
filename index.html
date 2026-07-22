@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fayrah Li | Personal Website</title>
     <style>
-        /* Global Base & Soft Sand Color Palette */
         :root {
             --sand-bg: #F5F1E9;
             --sand-card: #FAF7F2;
@@ -28,7 +27,8 @@
             color: var(--text-main);
             line-height: 1.7;
         }
-        /* Fixed Navigation Bar */
+
+        /* 导航栏样式 */
         nav {
             position: fixed;
             width: 100%;
@@ -63,13 +63,13 @@
         .nav-links a:hover {
             color: var(--sand-dark);
         }
-        /* Mobile Nav Toggle */
         .menu-toggle {
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
         }
-        /* Page Container & Section Layout */
+
+        /* 全局容器 */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -86,7 +86,8 @@
             padding-bottom: 0.5rem;
             display: inline-block;
         }
-        /* Hero Header Section */
+
+        /* 首页头部区域 */
         #hero {
             min-height: 100vh;
             display: flex;
@@ -124,7 +125,8 @@
             object-fit: cover;
             display: block;
         }
-        /* Card Content Style */
+
+        /* 内容卡片样式 */
         .content-card {
             background-color: var(--sand-card);
             padding: 2.5rem;
@@ -134,9 +136,10 @@
         .content-card p {
             font-size: 1.05rem;
             color: var(--text-main);
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
         }
-        /* Contact Footer Section */
+
+        /* 联系板块 */
         #contact {
             text-align: center;
             padding-bottom: 6rem;
@@ -147,7 +150,8 @@
             color: var(--sand-dark);
             font-weight: 500;
         }
-        /* Mobile Responsive Breakpoint */
+
+        /* 移动端适配 */
         @media (max-width: 768px) {
             .nav-links {
                 position: absolute;
@@ -185,7 +189,7 @@
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
+    <!-- 顶部导航栏 -->
     <nav>
         <div class="nav-container">
             <div class="nav-logo">Fayrah Li</div>
@@ -199,7 +203,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section with Profile Photo Placeholder -->
+    <!-- 首页头像&名字区域 -->
     <section id="hero">
         <div class="container hero-wrapper">
             <div class="hero-text">
@@ -207,33 +211,65 @@
                 <p class="tagline">Aspiring Student</p>
             </div>
             <div class="profile-photo-container">
-                <!-- Photo placeholder, no broken page if missing photo.jpg -->
+                <!-- 头像占位，photo.jpg缺失时自动隐藏图片区域，页面不会报错崩溃 -->
                 <img src="photo.jpg" alt="Fayrah Li Profile Photo" onerror="this.style.display='none'">
             </div>
         </div>
     </section>
 
-    <!-- About Me Section -->
+    <!-- About Me 完整内容 -->
     <section id="about" class="container">
         <h2 class="section-title">About Me</h2>
         <div class="content-card">
-            <p>My name is Fayrah Li, a senior student with the title of an aspiring student. I am working toward a double major in Psychology and Digital New Media. I hold a strong curiosity around human thought patterns and behaviors, alongside the influence social media and digital platforms exert on daily human life. This dual major lets me study human psychology and contemporary digital communication from two complementary viewpoints. I love ice skating during my free time as a way to relax and stay focused.</p>
-            <p>While I am still exploring my long-term career path, I stay eager to absorb new knowledge, explore new chances, and eventually build a career that perfectly merges my academic and personal interests.</p>
+            <p>I am a senior student, and I'm currently studying Psychology and Digital New Media as a double major. I'm curious about how people think and behave, as well as how social media, digital content, and online platforms influence our everyday lives. These two fields allow me to explore both human behavior and modern communication from different perspectives.</p>
+            <p>Outside of academics, I enjoy ice skating whenever I get the opportunity. Although I'm still figuring out exactly what I want to do in the future, I'm excited to keep learning, exploring new opportunities, and finding a career that combines my interests.</p>
         </div>
     </section>
 
-    <!-- Skills & Hobbies Section -->
+    <!-- Skills 完整全文 -->
     <section id="skills" class="container">
         <h2 class="section-title">Skills & Hobbies</h2>
         <div class="content-card">
-            <p>Pre-Calculus stands out as my core academic strength, and consistent focused effort in this subject has shaped my core thinking style. Working through intricate formulas and multi-layered math problems not only brought me academic success, but also trained me to untangle complex concepts, analyze problems from multiple viewpoints, and deliver structured, stable solutions. This logical framework has boosted my efficiency across all coursework, and my hard work was recognized with a school Pre-Calculus award that was granted to only three students in our entire grade.</p>
-            <p>Outside formal academics, I spend my free time on creative pursuits: drawing, music creation, and photography. Drawing lets me capture delicate details and externalize internal ideas visually; creating and performing music lets me immerse myself in emotional expression; photography lets me document quiet, ordinary moments from daily life. These creative hobbies have refined my observational skills and personal aesthetic taste, balancing the rigid logic I built from mathematics and granting me more flexible, creative problem-solving perspectives.</p>
+            <p>Pre-Calculus is my strongest academic subject, and I always put dedicated effort into this math course. Figuring out complicated math formulas and working through multi-step problems doesn’t just get me good grades. It teaches me how to sort out messy ideas, analyze issues from different angles, and solve difficulties in a steady, organized way. This logical thinking habit has quietly helped me manage all my other school assignments more efficiently. So all my hard work in Pre-Calculus got me a school award, and just three people in our grade received it.</p>
+            <p>Away from textbooks and classwork, I fill most of my spare time with creative hobbies including drawing, music and photography. When I draw, I focus on capturing subtle details and expressing my inner thoughts visually. Playing and creating music lets me feel and convey emotions in a soft, immersive way. As for photography, I love wandering around to record ordinary little moments with my camera. These artistic hobbies cultivate my observation skills and unique personal aesthetics. They soften my rigid logical thinking from math studies and allow me to view daily life and problems with more creative and flexible perspectives.</p>
         </div>
     </section>
 
-    <!-- Activities & Background Section -->
+    <!-- Activities 完整无截断原文 -->
     <section id="activities" class="container">
         <h2 class="section-title">Activities & Background</h2>
         <div class="content-card">
-            <p>Currently enrolled at Dalian American International School (DAIS), I am completing my double major in Psychology and Media with a Digital New Media concentration. My most meaningful independent academic project centered on teenage appearance anxiety, where I researched how social media fuels appearance-centric worries. ...
-<img src="photo.jpg" alt="Fayrah Li Profile Photo" onerror="this.style.display='none'">
+            <p>I am currently a student at Dalian American International School (DAIS), where I am pursuing a double major in Psychology and Media with a concentration in Digital New Media.</p>
+            <p>One of the projects I am most proud of is an independent research project on appearance anxiety among teenagers. Inspired by my own observations, I explored how social media can contribute to appearance-related concerns. Through surveys and interviews, I examined the negative effects of online content and connected my findings to concepts such as algorithm-driven recommendations and filter bubbles, showing how personalized content can reinforce unrealistic beauty standards. This project allowed me to combine my interests in psychology and digital media while addressing a real-world social issue.</p>
+            <p>Outside the classroom, I co-founded a Creative Exploration Club with one of my classmates. Together, we organize free weekly art activities for children in our local community. We design a new theme each week to encourage creativity, curiosity, and hands-on learning, giving every child the opportunity to explore different forms of artistic expression.</p>
+            <p>In 2025, I also participated in a business competition focused on entrepreneurship, where my team worked on developing innovative business ideas and presenting practical solutions to real-world challenges. The experience strengthened my teamwork, communication, and problem-solving skills.</p>
+            <p>In addition, I volunteered as a museum docent, introducing visitors to the biology and habitat of brown bears. This experience helped me become more confident in public speaking and taught me how to communicate scientific knowledge in an engaging and accessible way.</p>
+            <p>Through these academic projects, community activities, competitions, and volunteer experiences, I have developed a deeper appreciation for understanding people, communicating ideas effectively, and making a positive impact in my community.</p>
+        </div>
+    </section>
+
+    <!-- 联系板块 -->
+    <section id="contact" class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="content-card">
+            <p>If you wish to contact me, please send emails to:</p>
+            <div class="contact-email">kexin_li@daischina.net</div>
+        </div>
+    </section>
+
+    <!-- 移动端导航JS逻辑 -->
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const navMenu = document.getElementById('navMenu');
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        // 点击导航后自动收起移动端菜单
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            })
+        })
+    </script>
+</body>
+</html>
